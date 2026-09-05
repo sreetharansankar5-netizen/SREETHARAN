@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Book Car Wash</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+        🚗 Home Car Wash
+    </a>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a class="active" href="Booking.html">Book Wash</a>
+        <a href="Wash Tracking.html">Tracking</a>
+        <a href="Payment.html">Payment</a>
+        <a href="Customer Profile.html">Profile</a>
+    </nav>
+
+</header>
+
+<main class="container">
+
+    <div class="page-head">
+
+        <span class="eyebrow">
+            NEW BOOKING
+        </span>
+
+        <h1>
+            Book Your Home Car Wash
+        </h1>
+
+        <p>
+            Choose your car, package, location and time.
+        </p>
+
+    </div>
+
+
+    <div class="booking-layout">
+
+        <form id="bookingForm" class="card form-card">
+
+            <!-- CAR -->
+
+            <div class="step">
+
+                <span>1</span>
+
+                <div>
+
+                    <h3>Car Details</h3>
+
+                    <div class="grid two">
+
+                        <div>
+
+                            <label>
+                                Car Type
+                            </label>
+
+                            <select id="carType">
+
+                                <option value="Sedan">
+                                    Sedan
+                                </option>
+
+                                <option value="Hatchback">
+                                    Hatchback
+                                </option>
+
+                                <option value="SUV">
+                                    SUV / 4x4 (+RM10)
+                                </option>
+
+                                <option value="MPV">
+                                    MPV / Van (+RM15)
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <div>
+
+                            <label>
+                                Car Plate
+                            </label>
+
+                            <input
+                                id="plate"
+                                placeholder="ABC 1234"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PACKAGE -->
+
+            <div class="step">
+
+                <span>2</span>
+
+                <div>
+
+                    <h3>
+                        Wash Package
+                    </h3>
+
+                    <div class="package-options">
+
+                        <label class="option">
+
+                            <input
+                                type="radio"
+                                name="package"
+                                value="Basic Wash"
+                                data-price="25"
+                                checked
+                            >
+
+                            <b>Basic Wash</b>
+
+                            <strong>
+                                RM25
+                            </strong>
+
+                            <small>
+                                Exterior wash + dry
+                            </small>
+
+                        </label>
+
+
+                        <label class="option">
+
+                            <input
+                                type="radio"
+                                name="package"
+                                value="Premium Wash"
+                                data-price="45"
+                            >
+
+                            <b>Premium Wash</b>
+
+                            <strong>
+                                RM45
+                            </strong>
+
+                            <small>
+                                Exterior + interior + tyre care
+                            </small>
+
+                        </label>
+
+
+                        <label class="option">
+
+                            <input
+                                type="radio"
+                                name="package"
+                                value="Deluxe Wash"
+                                data-price="70"
+                            >
+
+                            <b>Deluxe Wash</b>
+
+                            <strong>
+                                RM70
+                            </strong>
+
+                            <small>
+                                Premium + wax + dashboard detail
+                            </small>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- DATE -->
+
+            <div class="step">
+
+                <span>3</span>
+
+                <div>
+
+                    <h3>
+                        Date & Time
+                    </h3>
+
+                    <div class="grid two">
+
+                        <div>
+
+                            <label>
+                                Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="date"
+                                required
+                            >
+
+                        </div>
+
+                        <div>
+
+                            <label>
+                                Time
+                            </label>
+
+                            <select id="time">
+
+                                <option>
+                                    09:00 AM
+                                </option>
+
+                                <option>
+                                    10:30 AM
+                                </option>
+
+                                <option>
+                                    12:00 PM
+                                </option>
+
+                                <option>
+                                    02:00 PM
+                                </option>
+
+                                <option>
+                                    03:30 PM
+                                </option>
+
+                                <option>
+                                    05:00 PM
+                                </option>
+
+                                <option>
+                                    06:30 PM
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- LOCATION -->
+
+            <div class="step">
+
+                <span>4</span>
+
+                <div>
+
+                    <h3>
+                        Home Location
+                    </h3>
+
+                    <label>
+                        Address
+                    </label>
+
+                    <textarea
+                        id="address"
+                        rows="3"
+                        placeholder="House number, street, area"
+                        required>
+                    </textarea>
+
+                    <button
+                        type="button"
+                        class="btn outline"
+                        onclick="useLocation()">
+
+                        📍 Use My Location
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PAYMENT -->
+
+            <div class="step">
+
+                <span>5</span>
+
+                <div>
+
+                    <h3>
+                        Payment
+                    </h3>
+
+                    <div class="radio-row">
+
+                        <label>
+
+                            <input
+                                type="radio"
+                                name="pay"
+                                value="Online"
+                                checked
+                            >
+
+                            💳 Online Payment
+
+                        </label>
+
+                        <label>
+
+                            <input
+                                type="radio"
+                                name="pay"
+                                value="Cash"
+                            >
+
+                            💵 Cash
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="btn full"
+                type="submit">
+
+                Confirm Booking →
+
+            </button>
+
+        </form>
+
+
+        <!-- SUMMARY -->
+
+        <aside class="card summary">
+
+            <h2>
+                Booking Summary
+            </h2>
+
+            <div id="summary"></div>
+
+            <hr>
+
+            <div class="total">
+
+                <span>
+                    Total
+                </span>
+
+                <strong id="total">
+                    RM25.00
+                </strong>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>

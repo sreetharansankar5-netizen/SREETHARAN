@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wash Tracking</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+        🚗 Home Car Wash
+    </a>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="Booking.html">Book Wash</a>
+        <a class="active" href="Wash Tracking.html">Tracking</a>
+        <a href="Payment.html">Payment</a>
+        <a href="Customer Profile.html">Profile</a>
+    </nav>
+
+</header>
+
+
+<main class="container">
+
+    <div class="page-head">
+
+        <span class="eyebrow">
+            LIVE SERVICE
+        </span>
+
+        <h1>
+            Track Your Washer
+        </h1>
+
+        <p id="trackBooking">
+            Loading booking...
+        </p>
+
+    </div>
+
+
+    <div class="tracking-layout">
+
+        <section class="card">
+
+            <div class="washer-head">
+
+                <div class="avatar">
+                    👨‍🔧
+                </div>
+
+                <div>
+
+                    <h2 id="washerName">
+                        Ahmad
+                    </h2>
+
+                    <p>
+                        ⭐ 4.9 • Verified Washer
+                    </p>
+
+                </div>
+
+                <span
+                    class="status-pill"
+                    id="statusPill">
+
+                    Accepted
+
+                </span>
+
+            </div>
+
+
+            <div
+                class="progress"
+                id="progress">
+            </div>
+
+
+            <div class="map">
+
+                <div class="map-pin customer">
+                    🏠
+                </div>
+
+                <div class="route"></div>
+
+                <div class="map-pin washer">
+                    🚗
+                </div>
+
+                <div class="map-label">
+                    Live Route Preview
+                </div>
+
+            </div>
+
+
+            <div class="track-actions">
+
+                <button
+                    class="btn"
+                    onclick="nextStatus()">
+
+                    Update Status
+
+                </button>
+
+
+                <button
+                    class="btn outline"
+                    onclick="navigateToCustomer()">
+
+                    🧭 Navigate
+
+                </button>
+
+
+                <button
+                    class="btn outline"
+                    onclick="contactWasher()">
+
+                    📞 Contact
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section class="card">
+
+            <h2>
+                Service Details
+            </h2>
+
+            <div id="serviceDetails">
+
+                <p>
+                    No booking information yet.
+                </p>
+
+            </div>
+
+
+            <hr>
+
+
+            <h3>
+                Washer Checklist
+            </h3>
+
+
+            <label class="task">
+
+                <input type="checkbox">
+
+                Equipment Ready
+
+            </label>
+
+
+            <label class="task">
+
+                <input type="checkbox">
+
+                Water & Supplies Ready
+
+            </label>
+
+
+            <label class="task">
+
+                <input type="checkbox">
+
+                Customer Notified
+
+            </label>
+
+
+            <button
+                class="btn full"
+                onclick="completeWash()">
+
+                Mark Service Completed
+
+            </button>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

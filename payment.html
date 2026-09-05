@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+<title>Payment</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+<a href="index.html" class="logo">
+    🚗 Home Car Wash
+</a>
+
+<nav>
+
+<a href="index.html">
+    Home
+</a>
+
+<a href="Booking.html">
+    Book Wash
+</a>
+
+<a href="Wash Tracking.html">
+    Tracking
+</a>
+
+<a class="active" href="Payment.html">
+    Payment
+</a>
+
+<a href="Customer Profile.html">
+    Profile
+</a>
+
+</nav>
+
+</header>
+
+
+<main class="container">
+
+<div class="page-head">
+
+<span class="eyebrow">
+    PAYMENT
+</span>
+
+<h1>
+    Payment & Receipts
+</h1>
+
+<p>
+    Complete payment and view payment history.
+</p>
+
+</div>
+
+
+<div class="grid two">
+
+
+<section class="card">
+
+<h2>
+    Current Payment
+</h2>
+
+<div id="paymentBox">
+</div>
+
+
+<form id="paymentForm">
+
+<label>
+    Payment Method
+</label>
+
+<select id="paymentMethod">
+
+<option>
+    Visa / Mastercard
+</option>
+
+<option>
+    Online Banking
+</option>
+
+<option>
+    E-Wallet
+</option>
+
+<option>
+    Cash
+</option>
+
+</select>
+
+
+<div id="cardFields">
+
+<label>
+    Card Number
+</label>
+
+<input
+    placeholder="4111 1111 1111 1111">
+
+
+<div class="grid two">
+
+<input
+    placeholder="MM/YY">
+
+<input
+    placeholder="CVV">
+
+</div>
+
+</div>
+
+
+<button
+    class="btn full">
+
+    💳 Pay & Generate Receipt
+
+</button>
+
+</form>
+
+</section>
+
+
+<section class="card">
+
+<h2>
+    Payment History
+</h2>
+
+<div id="history">
+</div>
+
+</section>
+
+</div>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>

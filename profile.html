@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+<title>Customer Profile</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+<a href="index.html" class="logo">
+    🚗 Home Car Wash
+</a>
+
+<nav>
+
+<a href="index.html">
+    Home
+</a>
+
+<a href="Booking.html">
+    Book Wash
+</a>
+
+<a href="Wash Tracking.html">
+    Tracking
+</a>
+
+<a href="Payment.html">
+    Payment
+</a>
+
+<a class="active" href="Customer Profile.html">
+    Profile
+</a>
+
+</nav>
+
+</header>
+
+
+<main class="container">
+
+<div class="page-head">
+
+<span class="eyebrow">
+    MY ACCOUNT
+</span>
+
+<h1>
+    Customer Profile
+</h1>
+
+</div>
+
+
+<div class="grid two">
+
+
+<section class="card">
+
+<div class="profile-top">
+
+<div class="avatar large">
+    👤
+</div>
+
+<div>
+
+<h2 id="profileName">
+    Customer
+</h2>
+
+<p id="profileEmail">
+    Not signed in
+</p>
+
+</div>
+
+</div>
+
+
+<form id="profileForm">
+
+<label>
+    Full Name
+</label>
+
+<input
+    id="name"
+    placeholder="Your name"
+    required>
+
+
+<label>
+    Email
+</label>
+
+<input
+    id="email"
+    type="email"
+    placeholder="you@example.com"
+    required>
+
+
+<label>
+    Phone
+</label>
+
+<input
+    id="phone"
+    placeholder="+60 12 345 6789">
+
+
+<label>
+    Default Address
+</label>
+
+<textarea
+    id="profileAddress"
+    rows="3">
+</textarea>
+
+
+<button class="btn full">
+    Save Profile
+</button>
+
+</form>
+
+</section>
+
+
+<section class="card">
+
+<h2>
+    Booking History
+</h2>
+
+<div id="historyBookings">
+</div>
+
+
+<h3>
+    Quick Actions
+</h3>
+
+<div class="grid two">
+
+<a
+    class="btn"
+    href="Booking.html">
+
+    + New Booking
+
+</a>
+
+
+<button
+    class="btn outline"
+    onclick="rebookLast()">
+
+    ↻ Rebook Last
+
+</button>
+
+</div>
+
+</section>
+
+</div>
+
+
+<section class="card review-card">
+
+<h2>
+    Rate Your Latest Service ⭐
+</h2>
+
+<div
+    class="stars"
+    id="stars">
+
+    ☆ ☆ ☆ ☆ ☆
+
+</div>
+
+
+<textarea
+    id="reviewText"
+    placeholder="Tell us about your experience...">
+</textarea>
+
+
+<br><br>
+
+<button
+    class="btn"
+    onclick="submitReview()">
+
+    Submit Review
+
+</button>
+
+</section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
